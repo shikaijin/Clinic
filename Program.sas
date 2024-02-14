@@ -9,9 +9,9 @@ run;
 
 ods graphics on;
 
-proc lifetest data=demog plots=(survival logsurv);
+proc lifetest data=demog method=km;
 	time ae_day*ae(0);
-	strata Treatment;
+	strata treatment;
 run;
 
 ods graphics off;
